@@ -17,6 +17,20 @@
                 {{marketplace}}
             </li>
         </ol>
+        <h3>My existing skills-</h3>
+        <ol>
+            <li v-for="skill in myExistingSkills">
+                {{skill}}
+            </li>
+        </ol>
+        <p><strong>Despite having the above skills I don't get much job from marketplaces.</strong></p>
+
+        <h3>Learned &amp; Practiced Today- </h3>
+        <ol>
+            <li v-for="topic in vueJsTopicsLearnedToday">
+                {{topic}}
+            </li>
+        </ol>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -28,7 +42,10 @@
                 myName: "Md. Mufachir Hossain",
                 myProfession: "Software Engineer",
                 reasonForLearningVue: "I want to get work from international marketplaces and secure any remote job with higher salaries.",
-                targetMarketplaces: ['Toptal', 'Hubstaff Talent', 'Fiverr', 'Upwork', 'Freelancer.com']
+                targetMarketplaces: ['Toptal', 'Hubstaff Talent', 'Fiverr', 'Upwork', 'Freelancer.com'],
+                myExistingSkills: ["HTML", 'CSS', 'Javascript', 'jQuery', 'AJAX', 'Bootstrap', 'SQL', 'PLSQL', 
+                'MySQL', 'PostgreSQL', 'Grails', 'JasperReports', 'Java', 'Apache Tomcat'],
+                vueJsTopicsLearnedToday: ['Referencing Vue.js Library', 'Vue Instance', 'Expression', 'Directives']
             }
         });
     </script>
