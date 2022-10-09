@@ -8,7 +8,15 @@
 </head>
 <body>
     <div id="root">
-
+        <h1>{{greetings}}</h1>
+        <p>My name is {{myName}}. I am a {{myProfession}}.</p>
+        <p>I've started learning vue because {{reasonForLearningVue}}</p>
+        <h3>My targeted marketplaces-</h3>
+        <ol>
+            <li v-for="marketplace in targetMarketplaces">
+                {{marketplace}}
+            </li>
+        </ol>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -16,7 +24,11 @@
         new Vue({
             el: '#root',
             data: {
-                greetings: "Assalamu alaikum."
+                greetings: "Assalamu alaikum.",
+                myName: "Md. Mufachir Hossain",
+                myProfession: "Software Engineer",
+                reasonForLearningVue: "I want to get work from international marketplaces and secure any remote job with higher salaries.",
+                targetMarketplaces: ['Toptal', 'Hubstaff Talent', 'Fiverr', 'Upwork', 'Freelancer.com']
             }
         });
     </script>
